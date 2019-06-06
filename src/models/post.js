@@ -14,11 +14,6 @@ const PostSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    comments: [{
-        type: mongoose.Schema.Types.ObjectId,
-        require: true,
-        ref: 'Comments'
-    }],
     tags: [{
         type: mongoose.Schema.Types.ObjectId,
         require: true,
@@ -29,6 +24,10 @@ const PostSchema = mongoose.Schema({
         require: true
     },
     created_at: {
+        type: Date,
+        default: new Date()
+    },
+    updated_at: {
         type: Date,
         default: new Date()
     }

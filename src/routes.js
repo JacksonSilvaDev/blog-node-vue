@@ -7,6 +7,7 @@ const authMiddleware = require('./auth/middlewares/auth');
 
 const UserController = require('./controllers/authController');
 const TagsController = require('./controllers/tagsController');
+const CommentsController = require('./controllers/commentsController');
 
 
 
@@ -17,8 +18,8 @@ routes.post('/authenticate', UserController.auth);
 
 home.use(authMiddleware);
 
-
-
+// Comments 
+home.get('/comments/:id', CommentsController.show)
 
 // Tags
 home.get('/tags', TagsController.index)
