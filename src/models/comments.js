@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const CommentsSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        required: true,
         ref:'User'
     },
     description: {
         type: String,
-        require: true
+        required: true
     },
     post: {
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        required: true,
         ref:'Post'
     },
     created_at: {

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const TagsSchema = mongoose.Schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     created_at: {
         type: Date,

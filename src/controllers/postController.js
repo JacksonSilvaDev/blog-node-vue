@@ -23,13 +23,21 @@ module.exports = {
     async store(req, res) {
 
         try {
+            const post = await Post.create(req.body);
 
+            res.send(post)
         } catch (err) {
             return res.status(400).send(err);
         }
     },
     async update(req, res) {
+        try {
+            const post = await Post.findByIdAndUpdate(req.params.id, req.body);
 
+            res.send(post)
+        } catch (err) {
+            return res.status(400).send(err);
+        }
     },
     async destroy(req, res) {
         try {

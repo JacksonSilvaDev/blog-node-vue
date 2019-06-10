@@ -1,4 +1,5 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
 const mongoose = require('mongoose')
 const requireDir = require('require-dir');
 const cors = require('cors')
@@ -14,6 +15,9 @@ mongoose.connect('mongodb://localhost:27017/blog-vue-node', {
 
 requireDir('./models')
 
-const routes = require('./routes');
+const routes = require('./routes')
+
+app.use('/', routes.routes)
+app.use('/api', routes.home)
 
 app.listen(3000)

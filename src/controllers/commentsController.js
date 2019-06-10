@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = mongoose.model('Comment');
+const Comment = mongoose.model('Comments');
 
 module.exports = {
     async index(req, res) {

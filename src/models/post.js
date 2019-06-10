@@ -3,25 +3,25 @@ const mongoose = require('mongoose');
 const PostSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        required: true,
         ref: 'User'
     },
     title: {
         type: String,
-        require: true
+        required: true
     },
     text: {
         type: String,
-        require: true
+        required: true
     },
     tags: [{
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        required: true,
         ref: 'Tags'
     }],
     image: {
         type: String,
-        require: true
+        required: true
     },
     created_at: {
         type: Date,

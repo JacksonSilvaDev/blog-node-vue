@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const crypto = require('crypto');
 // ^ Token temporário
 
-const authConfig = require('../config/auth.json')
+const authConfig = require('../config/auth.json');
 // ^ Pegando o Secret da aplicação
 
 function generateToken(params = {}) {
