@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" clipped fixed app>
+    <v-navigation-drawer color="#1fac69" v-model="drawer" clipped fixed app>
       <v-list dense>
         <v-list-tile @click>
           <v-list-tile-action>
@@ -23,7 +23,7 @@
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-layout justify-center align-center>
-        <v-avatar :tile="tile" :size="45" color="lighten-4">
+        <v-avatar :size="45" color="lighten-4">
           <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
         </v-avatar>
         <v-toolbar-title>Blog Node Vue</v-toolbar-title>

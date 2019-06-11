@@ -1,0 +1,9 @@
+.theme--dark.v-toolbar,
+.theme--dark.v-toolbar__side-icon,
+.v-list__tile__action i {
+    color: #1fac69 !important;
+}
+
+.green-custom {
+    background-color: #1fac69 !important;
+}
