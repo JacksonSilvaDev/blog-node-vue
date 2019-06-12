@@ -1,6 +1,6 @@
 .theme--dark.v-toolbar,
 .theme--dark.v-toolbar__side-icon,
-.v-list__tile__action i {
+.v-list__tile__action i .green--text {
     color: #1fac69 !important;
 }
 
