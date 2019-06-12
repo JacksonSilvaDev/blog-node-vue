@@ -1,31 +1,28 @@
 <template>
   <v-flex xs12 sm6 md6>
     <v-hover>
-      <v-card
-        slot-scope="{ hover }"
-        :class="`elevation-${hover ? 12 : 2}`"
-        color="darken-5"
-        class="green-custom white--text"
-      >
-        <v-layout>
-          <v-flex xs5>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="200px" contain></v-img>
-          </v-flex>
-          <v-flex xs7>
-            <v-card-title primary-title>
-              <div>
-                <div class="headline">Supermodel</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu lorem vel enim consectetur molestie a vel sem. Etiam tincidunt mi in massa dictum, eu egestas ipsum iaculis. Maecenas orci nibh, auctor quis sapien at, eleifend feugiat erat. Praesent vitae finibus sapien, semper egestas lectus. Duis euismod vehicula convallis. Etiam quis ligula pulvinar, feugiat arcu a, dapibus ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Phasellus suscipit aliquam sapien, id tincidunt mauris bibendum quis. Pellentesque et cursus nibh.</div>
-              </div>
-            </v-card-title>
-          </v-flex>
-        </v-layout>
-        <v-divider light></v-divider>
-        <v-card-actions class="pa-3">
-          23 de outubro de 2019 - Jackson
-          <v-spacer></v-spacer>
-          <v-rating background-color="orange lighten-3" color="orange" v-model="rating"></v-rating>
-        </v-card-actions>
+      <v-card slot-scope="{ hover }" class="mx-auto" color="grey lighten-4" max-width="600">
+        <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/cards/kitchen.png">
+          <v-expand-transition>
+            <div
+              v-if="hover"
+              class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+              style="height: 100%;"
+            >$14.99</div>
+          </v-expand-transition>
+        </v-img>
+        <v-card-text class="pt-4" style="position: relative;">
+          <!-- <v-btn absolute color="orange" class="white--text" fab large right top>
+           <v-rating background-color="orange lighten-3" color="orange" v-model="rating"></v-rating>
+          </v-btn>-->
+          <div class="grey--text title mb-2">Title</div>
+          <div class="font-weight-light grey--text title mb-2">
+            Our Vintage kitchen utensils delight any chef.
+            <br>Made of bamboo by hand
+          </div>
+
+          <div class="font-weight-light grey--text">23 de outubro de 2018 - Jackson Silva</div>
+        </v-card-text>
       </v-card>
     </v-hover>
   </v-flex>
@@ -41,5 +38,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
 </style>
